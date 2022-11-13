@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["j12r"]
+description = "Todo app in Spin"
+name = "spin-todo-app"
+version = "1.0.0"
+trigger = { type = "http", base = "/api" }
+
+[[component]]
+id = "spin_todo_app"
+source = "bin/Release/net7.0/spin-todo-app.wasm"
+[component.build]
+command = "dotnet build -c Release"
+[component.trigger]
+route = "/todo"
