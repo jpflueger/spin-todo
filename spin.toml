@@ -1,14 +1,20 @@
 spin_version = "1"
-authors = ["j12r"]
+authors = ["Justin Pflueger (justin.pflueger@fermyon.com)"]
 description = "Todo app in Spin"
 name = "spin-todo-app"
-version = "1.0.0"
+version = "0.1.0"
 trigger = { type = "http", base = "/api" }
 
+[variables]
+pg_conn_str = { required = true }
+
 [[component]]
-id = "spin_todo_app"
-source = "bin/Release/net7.0/spin-todo-app.wasm"
+id = "spin_todo_api"
+source = "src/todo-api/bin/Release/net7.0/todo-api.wasm"
 [component.build]
 command = "dotnet build -c Release"
+workdir = "./src/todo-api"
 [component.trigger]
 route = "/todo"
+[component.config]
+pg_conn_str = "{{ pg_conn_str }}"

@@ -1,0 +1,5 @@
+{
+    "evenBetterToml.schema.associations": {
+        "./spin.toml": "https://gist.githubusercontent.com/jpflueger/313fac997385104497737a973dc30ed7/raw/9ce8b965414a7a23112b8bfbc1824653f95b8f5a/schema.json",
+    }
+}
