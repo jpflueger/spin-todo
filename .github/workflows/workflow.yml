@@ -53,10 +53,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: engineerd/configurator@v0.0.8
-        name: spin
-        fromGitHubReleases: true
-        pathInArchive: spin
-        repo: fermyon/spin
-        version: "^v0.6.0"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        name: Install Spin v0.6.0
+        with:
+          fromGitHubReleases: true
+          pathInArchive: spin
+          repo: fermyon/spin
+          version: "^v0.6.0"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - run: spin --version
