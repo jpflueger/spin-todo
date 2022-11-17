@@ -55,6 +55,7 @@ jobs:
       - uses: engineerd/configurator@v0.0.8
         name: Install Spin v0.6.0
         with:
+          name: spin
           fromGitHubReleases: true
           pathInArchive: spin
           repo: fermyon/spin
