@@ -10,10 +10,10 @@ pg_conn_str = { required = true }
 
 [[component]]
 id = "spin_todo_api"
-source = "src/todo-api/bin/Release/net7.0/todo-api.wasm"
+source = "src/Todo.Api/bin/Release/net7.0/Todo.Api.wasm"
 [component.build]
 command = "dotnet build -c Release"
-workdir = "./src/todo-api"
+workdir = "./src/Todo.Api"
 [component.trigger]
 route = "/todo"
 [component.config]

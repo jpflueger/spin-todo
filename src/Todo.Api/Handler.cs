@@ -71,7 +71,7 @@ public static class Handler
 
             var connStr = SpinConfig.Get("pg_conn_str");
             var sql = "INSERT INTO todo_items (content) VALUES ($1) RETURNING id";
-            var parameters = new object[] { todoItem.Text };
+            var parameters = new object[] { todoItem.Content };
             var result = PostgresOutbound.Query(connStr, sql, parameters);
 
             if (result.Rows.Count > 0 && result.Rows[0].Count > 0 && result.Rows[0][0].Value() is int id)
