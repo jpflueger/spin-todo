@@ -23,7 +23,7 @@ jobs:
         with:
           path: ~/.nuget/packages
           # Look to see if there is a cache hit for the corresponding requirements file
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/obj/Release/*/project.assets.json') }}
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-nuget
 

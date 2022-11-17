@@ -6,6 +6,7 @@
     <!-- pull these out into a directory.build.props -->
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 
     <!-- properties for spin -->
     <UseWizer>false</UseWizer>
