@@ -51,7 +51,10 @@ jobs:
       matrix:
         dotnet-version: ['7']
     steps:
+
       - uses: actions/checkout@v3
+
       - run: curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash
         working-directory: /usr/local/bin
+
       - run: spin --version
